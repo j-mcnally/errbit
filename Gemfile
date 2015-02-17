@@ -10,6 +10,8 @@ gem 'railties', RAILS_VERSION
 
 gem 'moped', '~> 2.0.2'
 gem 'mongoid', '~> 4.0.0'
+gem 'mongoid-encrypted-fields'
+gem 'gibberish'
 
 gem 'mongoid_rails_migrations'
 gem 'devise'

@@ -4,11 +4,11 @@ class Notice
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :message
-  field :server_environment, :type => Hash
-  field :request, :type => Hash
-  field :notifier, :type => Hash
-  field :user_attributes, :type => Hash
+  field :message, :type => Mongoid::EncryptedString
+  field :server_environment, :type => Mongoid::EncryptedHash
+  field :request, :type =>  Mongoid::EncryptedHash
+  field :notifier, :type =>  Mongoid::EncryptedHash
+  field :user_attributes, :type =>  Mongoid::EncryptedHash
   field :framework
   field :error_class
   delegate :lines, :to => :backtrace, :prefix => true

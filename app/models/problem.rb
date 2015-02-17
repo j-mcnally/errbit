@@ -17,12 +17,12 @@ class Problem
   # Cached fields
   field :app_name, :type => String
   field :notices_count, :type => Integer, :default => 0
-  field :message
+  field :message,    :type => Mongoid::EncryptedString
   field :environment
   field :error_class
   field :where
   field :user_agents, :type => Hash, :default => {}
-  field :messages,    :type => Hash, :default => {}
+  field :messages,    :type => Mongoid::EncryptedHash, :default => {}
   field :hosts,       :type => Hash, :default => {}
   field :comments_count, :type => Integer, :default => 0
 
